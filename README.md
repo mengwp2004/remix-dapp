@@ -6,7 +6,7 @@
 
 
 ## remix 环境
-打开，https://remix.ethereum.org  它是网页编辑工具
+打开https://remix.ethereum.org  它是网页编辑工具
 
 ## hello world 小例子
 
@@ -27,12 +27,18 @@ contract HelloWorld{
     我搭建的是私链，而且设置了chainId,会报 error: Invalid sender的错误，解决可以看下 https://blog.csdn.net/zhujie_666/article/details/88818160 如何查chainId它没说，可以查看下创建私链的genesis.json 文件,我的chainId是123。
 
 ### 3 测试智能合约　
+    
+    attach到私链，或者自己写下 js 测试程序，我是attach到私链的
+    geth attach http://127.0.0.1:8545
 
-> var abi=[{"constant": true,"inputs": [],"name": "say","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "pure","type": "function"}]
+```javascript
 
-> var contractAddress = "0x740DFC102F2497E0fbe26E67Dfc21004201C2b53"
+    var abi=[{"constant": true,"inputs": [],"name": "say","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "pure","type": "function"}]
 
-> var contract = eth.contract(abi).at(contractAddress);
+    var contractAddress = "0x740DFC102F2497E0fbe26E67Dfc21004201C2b53"
 
-> contract.say()
-"Hello Wrold"
+    var contract = eth.contract(abi).at(contractAddress);
+
+    contract.say()
+    //"Hello Wrold"
+```
