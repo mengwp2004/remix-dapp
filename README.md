@@ -1,16 +1,16 @@
-#eth dapp开发
+# eth dapp开发
 
-##metamask钱包
+## metamask钱包
 
 我用的是chrome,在扩展程序里查找下metamask进行安装
 
 
-##remix 环境
+## remix 环境
 打开，https://remix.ethereum.org  它是网页编辑工具
 
-##hello world 小例子
+## hello world 小例子
 
-可以参照下 https://blog.csdn.net/qq_27317475/article/details/80894593
+### 可以参照下 https://blog.csdn.net/qq_27317475/article/details/80894593
 
 ```javascript
 
@@ -23,7 +23,7 @@ contract HelloWorld{
 
 ```
 
-在用remix 的Deploy过程中，需要metamask进行确认，我搭建的是私链，而且设置了chainId,会报 error: Invalid sender的错误，解决可以看下 https://blog.csdn.net/zhujie_666/article/details/88818160 如何查chainId它没说，可以查看下创建私链的genesis.json 文件,我的chainId是123。
+### 在用remix 的Deploy过程中，需要metamask进行确认，我搭建的是私链，而且设置了chainId,会报 error: Invalid sender的错误，解决可以看下 https://blog.csdn.net/zhujie_666/article/details/88818160 如何查chainId它没说，可以查看下创建私链的genesis.json 文件,我的chainId是123。
 
 > var abi=[{"constant": true,"inputs": [],"name": "say","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "pure","type": "function"}]
 
